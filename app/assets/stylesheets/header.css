@@ -1,0 +1,164 @@
+header
+{
+    background-color: white;
+    max-height: 20%;
+    min-height: 10%;
+    display:flex;
+}
+
+.headTitle
+{
+     margin-right: auto; 
+     padding-top: 30px;
+     font-size: 25px;
+     font-weight: bolder;
+     
+}
+
+.headInfo
+{
+    margin-left:auto;
+    padding-top: 10px;  
+
+}
+
+.headInfo small
+{
+    margin-left:50%;
+    font-size: 15px;
+}
+
+.headInfo p
+{
+    margin-top: auto;
+    margin-right: 15px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.img
+{
+    margin: 10px;
+    margin-left: 60px;
+    max-height: 120px;
+    min-height: 120px;
+}
+
+.icon-arrow
+{
+    margin-left: 4px;
+    width: 9px;
+    height: 9px;
+}
+
+.icon-vk
+{
+    margin-left: 4px;
+    width: 30px;
+    height: 30px;
+}
+
+.menuBar
+{
+    background-color: rgba(35,35,35);
+    height: 40px;
+    color: aliceblue;    
+    text-align: center;
+}
+
+nav > ul
+{
+    margin: 0; 
+    padding: 5px; 
+    list-style: none;
+    font: 18px Arial, Helvetica, sans-serif;   
+    font-family: Lucida Console;
+}
+ 
+nav > ul > li
+{
+    list-style: none;
+    display: inline-block;
+    margin-right: 50px; 
+    position:relative;
+    border: 1px; 
+    padding: 3px;  
+}
+ 
+nav li ul
+{
+    min-width:180px; 
+    position:absolute;
+    list-style:none;
+    text-align:center;
+    top:15px;
+    font-size:15px;
+    left:0;
+    margin:0;
+    padding:0;
+ 
+/* Анимация */
+    max-height:0px;
+    overflow:hidden;
+    -webkit-transition:max-height 0.4s linear;
+    -moz-transition:max-height 0.4s linear;
+    transition:max-height 0.4s linear;
+/* Конец строк анимации */
+}
+ 
+nav li:hover ul
+{
+    max-height:300px;
+}
+ 
+nav li ul li
+{
+    padding:5px 12px;
+    background-color:rgba(35,35,35);
+    text-align: left;
+    border-bottom:1px solid #888;
+}
+ 
+nav li ul li:last-child{
+    border-bottom:none;
+}
+ 
+nav li ul li:hover
+{
+    background-color:rgba(35,35,35);
+}
+ 
+nav li ul li:first-child{
+    margin-top:25px;
+    position:relative;
+}
+ 
+nav li ul li:first-child:before{
+    content:'';
+    position:absolute;
+    width:1px;
+    height:1px;
+    border:5px solid transparent;
+    border-bottom-color:rgba(35,35,35);
+    left:10px;
+    top:-10px;
+}
+
+.linkHead:link, .linkHead:visited, .linkHead:active
+{
+    color:white;
+    text-decoration: none;
+    outline: none;
+}
+
+.linkHead:hover
+{
+    color:red;
+}
+
+.headInfo ul
+{
+    list-style-image: url(/assets/vk.jpg);
+    font-size: 20px; 
+    padding-top: 15px;
+}

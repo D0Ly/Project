@@ -1,0 +1,19 @@
+<h1>Новости</h1>
+<% @noveltys.each do |novelty| %>
+
+<div class="posts">
+	<div class="postContent">
+	<h2><%=link_to novelty.title, novelty_path(novelty), class: "linkText" %></h2>
+
+	<div class="date">
+		<p>Дата публикации: <time><%= novelty.created_at.to_date %></time></p>
+	</div>
+
+	<%= image_tag novelty.image.url(:thumb), class: 'image-index' if novelty.image? %>
+
+	<div class="textContent"><%= sanitize(sanitize(novelty.text).truncate(200))%></div>
+</div>
+<p><%=link_to "Читать далее", novelty_path(novelty), class: "linkPost" %></p>
+</div>
+<% end %>
+<%= will_paginate @posts, renderer: 'BootstrapPaginationHelper::LinkRenderer', class: "paginate" %> 

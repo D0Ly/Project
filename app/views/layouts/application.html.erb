@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Кемеровский клуб Кусанаги</title>
+    <link rel="shortcut icon" href="/assets/kusanagi.ico" type="image/x-icon">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=e9d30447-eaa5-47cb-abf3-3570162a190b&lang=ru_RU" type="text/javascript">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div id="mainBlock">
+        <header>
+            <div class="img"><%= link_to image_tag("kusanagi.png", alt: "kusanagi"),
+            home_path, class: "linkHead" %></div>          
+            <div class="headTitle">
+                <p>Кемеровский клуб кендо Кусанаги</p>
+            </div>
+            <div class="headInfo">
+                <small>Телефон:</small>
+                <p>+7(xxx) xxx-xx-xx</p>              
+            </div>
+        </header>
+        
+        <div class="menuBar">
+          <nav>
+            <ul>
+              <li><%= link_to "О нас", about_path, class: 'linkHead' %></li>
+              <li class="linkHead">Кендо<%= image_tag("drop-down-arrow.png", alt: "down-arrow", class: "icon-arrow") %>
+                <ul>
+                  <li><%= link_to "О Кендо", kendo_path, class: 'linkHead'%></li>
+                  <li><%= link_to "Снаряжение", home_path, class: 'linkHead'%></li>
+                  <li><%= link_to "Терминология", vocabulary_path, class: 'linkHead' %></li>
+                  <li><%= link_to "Правила додзё", home_path, class: 'linkHead'%></li>
+                </ul>
+              </li>
+
+             <li><%= link_to "Статьи", posts_path, class: 'linkHead'%></li>
+             <li><%= link_to "Новости", noveltys_path, class: 'linkHead'%></li>
+             <li class="linkHead">Информация<%= image_tag("drop-down-arrow.png", alt: "down-arrow", class: "icon-arrow") %> 
+              <ul>
+                  <li><%= link_to "Аттестационная программа ",noveltys_path, class: 'linkHead' %></li>
+                  <li><%= link_to "Критерии оценки кендо ката ",noveltys_path, class: 'linkHead' %></li>
+              </li>
+            </ul>
+            </nav>
+        </div>
+        
+        <main>
+            <div class="content">
+                <p><%= yield %></p>
+            </div>
+            <div class="menu">
+                <div class="submenuBar">
+                <p>Дополнительно</p>
+                </div>
+                <div class="menuList" >
+                 <ul>
+                     <li><%= link_to "Главная", home_path, class: 'linkText'%></li>
+                     <li><%= link_to "Документы", doc_path, class: 'linkText' %></li>
+                     <li><%= link_to "Ссылки", link_path, class: 'linkText' %></li>
+                     <li><%= link_to "Расписание", schedule_path, class: 'linkText' %></li>
+                     <li><%= link_to "Адрес", address_path, class: 'linkText'%></li>
+                </ul>
+                </div>
+
+                <div class="vk">
+                  <script type="text/javascript" src="https://vk.com/js/api/openapi.js?160"></script>
+                       <div id="vk_groups"></div>
+                           <script type="text/javascript">
+                               VK.Widgets.Group("vk_groups", {mode: 4, no_cover: 1, height: "400"}, 22744502);
+                           </script>
+                </div>
+            </div>
+        </main>
+             
+        <footer>
+            <hr>
+            <p><b>Контактный телефон:</b><br> 8-903-909-31-70 (Дмитрий Сергеевич)</p>
+            <p><b>Эл.почта:</b><br> kendo-kemerovo@yandex.ru</p>
+        </footer>
+    </div>
+</body>
+</html>

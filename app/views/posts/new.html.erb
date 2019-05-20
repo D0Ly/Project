@@ -1,0 +1,28 @@
+<div class="editPost">
+<%= form_with scope: :post, html: {multipart: true}, url: posts_path, local: true do |form| %>
+	<% if @post.errors.any? %>
+ 			 <div id="error_explanation">
+   				 <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+    		<ul>
+  				  <% @post.errors.full_messages.each do |msg| %>
+    		 		 <li><%= msg %></li>
+  				  <% end %>
+  		  	</ul>
+  		 	 </div>
+		<% end %>
+
+<p>Название статьи</p>
+<%= form.text_field :title, class: 'title-field' %>
+		
+
+<p>Содержание статьи</p>
+<%= form.hidden_field :text, id: :subject_content  %>
+<trix-editor input="subject_content"></trix-editor>
+
+<p>Загрузить превью</p>
+<%= form.file_field :image %>
+<p><%= form.submit "Создать статью" %></p>
+
+<% end %>
+
+</div>

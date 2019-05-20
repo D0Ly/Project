@@ -1,0 +1,265 @@
+main
+{
+    background-color: white;
+    background-color: rgba(255,255,255,0.1);
+    height: 75%;
+    margin: 20px 0px;
+    display:flex;
+    flex-direction:row;
+    margin: 10px;
+
+}
+#map
+{
+    border: 2px solid gray;
+    height: 75%;
+    width: 81%;
+    margin-left: 80px;
+
+}
+
+.address
+{
+    padding-left: 75px;
+    padding-top: 10px;
+    text-align: left;
+    margin-top: 3px;
+    margin-bottom: 15px;
+}
+
+.content
+{
+    padding-top: 10px;
+    background-color: white; /* Цвет поля для контента */
+    width:75%;
+    min-height: 700px;
+    margin-right: auto;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    text-align: left;
+}
+
+.textContent
+{
+    width: 100%;
+    height: 100px;
+}
+
+.editPost
+{
+    margin:40px;
+}
+
+.image-show
+{
+    display: block;
+    margin-bottom: 20px;
+
+
+}
+
+.image-index
+{
+    padding:15px;
+    float: left;
+}
+
+.title-field
+{
+ width: 300px;
+}
+
+.content-field
+{
+    margin: 30px;
+    height: 300px;
+    width: 90%;
+}
+
+.content h1
+{
+    text-align: center;
+}
+
+.post
+{
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 1px;
+    overflow:hidden;
+}
+
+.posts
+{
+    margin-left: 10%;
+    margin-right: 10%;
+    border-bottom: 1px solid gray;
+    padding: 1px;
+    margin-top: 20px;
+    overflow:hidden;
+}
+
+.postContent
+{
+    overflow:hidden;
+}
+
+.date
+{
+    text-align: left;
+
+}
+
+.date p
+{
+    opacity:0.7;
+    font-size: 15px;
+}
+
+.date time
+{
+    opacity:1;
+    font-size: 12px;
+}
+
+.menu
+{
+    padding-top: 20px;
+    background-color: rgba(255,255,255,0.6); /* Цвет поля доп. меню */
+    width:25%;
+    margin-left: auto;
+}
+
+
+.submenuBar
+{ 
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    box-shadow: 3px 5px 5px rgba(0,0,0,0.8);
+    background-color: rgba(35,35,35);
+    margin: 10; 
+    padding: 5; 
+    height: 30px;
+    width: 83%;
+    margin-left: 10%; 
+    margin-bottom: 0;
+}
+
+.submenuBar p
+{
+    font-family: Impact;
+    color: aliceblue;
+    font: 15px;  
+    margin-top: 40px;
+    padding-top: 5px;
+}
+
+.menuList
+{
+    box-shadow: 0 0 15px rgba(0,0,0,0.8);
+    list-style-image: url(/assets/mark.png);
+    background-color: white;
+    
+    margin-left: 14%;
+    padding-top: 1px;  
+    padding-bottom: 10px;   
+    width: 75%;
+    height: auto;
+}
+
+.menuList li
+
+{
+    font-size: 20px; 
+    padding-top: 15px;
+    text-align: left; 
+    text-decoration: none;
+}
+
+.vk
+{
+    margin: 10;
+    margin-top: 30%; 
+    margin-left: 15%; 
+}
+
+.paginate
+{
+    color:red;
+    padding-top:15px;
+    text-align: center;
+    overflow:hidden;
+}
+
+.paginate li
+{
+   margin-right: 0px; 
+}
+
+.paginate a
+{
+    padding: -10px;
+    text-decoration: none;
+    outline: none;
+}
+
+.paginate a:link, .paginate a:active
+{
+    text-decoration: none;
+    outline: none;
+}
+
+.paginate li a:hover
+{
+    color:red;
+}
+
+.paginate a:visited
+{
+    color:blue;
+}
+
+.linkText:link, .linkText:visited, .linkText:active
+{
+    color:black;
+    text-decoration: none;
+    outline: none;
+}
+
+.linkText:hover
+{
+    color:red;
+}
+
+
+.linkPost:link, .linkPost:visited, .linkPost:active
+{
+    border: 1px solid blue;
+    border-radius: 3px;
+    padding: 5px;
+    background-color: white;
+    color:blue;
+    text-decoration: none;
+    outline: none;
+    
+}
+
+.linkPost:hover
+{
+    border: 1px solid red;
+    color:red;
+}
+
+#error_explanation
+{
+    background-color: rgba(191, 77, 77,0.5);;
+
+}
+
+/*      Страницы         */
+
+.about
+{
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 40px;
+}

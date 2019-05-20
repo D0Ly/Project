@@ -1,0 +1,10 @@
+<div class="post">
+	<h1><%= @novelty.title %></h1>
+		<%= image_tag @novelty.image.url(:large), class: 'image-show' if @novelty.image? %>
+		<p><%= sanitize @novelty.text %></p>
+
+		<div class="date">
+			<p>Дата публикации: <time><%= @novelty.created_at.to_date %></time></p>
+		</div>
+		<p><%= link_to 'Назад', noveltys_path, class: "linkPost"  %></p>
+</div>

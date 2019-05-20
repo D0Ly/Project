@@ -1,0 +1,33 @@
+<div class="editPost">
+	<%= form_with model: @post, local: true do |form| %>
+		<% if @post.errors.any? %>
+ 			 <div id="error_explanation">
+   				 <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+    		<ul>
+  				  <% @post.errors.full_messages.each do |msg| %>
+    		 		 <li><%= msg %></li>
+  				  <% end %>
+  		  	</ul>
+  		 	 </div>
+		<% end %>
+		<p><%= image_tag @post.image.url(:large), class: 'image-show' if @post.image? %></p>
+
+		<p>Название статьи</p>
+		<%= form.text_field :title, class: 'title-field' %>
+
+		<p>Содержание статьи</p>
+		<%= form.hidden_field :text, id: :subject_content  %>
+		<trix-editor input="subject_content"></trix-editor>
+
+		<p>Загрузить превью</p>
+		<%= form.file_field :image %>
+
+
+  		<p>
+  		  <%= form.submit %>
+  		</p>
+
+  		<%= link_to 'Удалить', post_path, method: :delete, data: { confirm: 'Вы уверены?' } %>
+
+<% end %>
+</div>
